@@ -28,7 +28,7 @@ import com.example.aspen.R
 import com.example.aspen.ui.theme.LightOnPrimary
 
 @Composable
-fun RecommendedPlaceItem() {
+fun RecommendedPlaceItem(recommendedPlace: RecommendedPlaces) {
     MaterialTheme {
         Column {
             Box(
@@ -40,7 +40,7 @@ fun RecommendedPlaceItem() {
                 contentAlignment = Alignment.Center,
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.win),
+                    painter = painterResource(id = recommendedPlace.placeImage),
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize(),
                     alignment = Alignment.Center,
@@ -65,7 +65,7 @@ fun RecommendedPlaceItem() {
 
                 ) {
                     Text(
-                        text = "2N/3D",
+                        text = recommendedPlace.stayingDayAndNight,
                         color = LightOnPrimary,
                         fontSize = 12.sp
                     )
@@ -75,7 +75,7 @@ fun RecommendedPlaceItem() {
             }
 //-----------------------------------
             Text(
-                text = "Aspen, Colorado",
+                text = recommendedPlace.placeName,
                 modifier = Modifier.padding(16.dp)
             )
 
@@ -88,6 +88,8 @@ fun RecommendedPlaceItem() {
 @Composable
 fun RecommendedPlaceItemPreview() {
     MaterialTheme {
-        RecommendedPlaceItem()
+        RecommendedPlaceItem(
+            recommendedPlace = TODO()
+        )
     }
 }

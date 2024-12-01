@@ -21,6 +21,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,7 +39,7 @@ import com.example.aspen.ui.theme.LightOnPrimary
 
 
 @Composable
-fun PopularPlaceItem() {
+fun PopularPlaceItem(popularPlace: PopularPlaces) {
     MaterialTheme {
         Box(
             modifier = Modifier
@@ -49,7 +50,7 @@ fun PopularPlaceItem() {
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(id = R.drawable.win),
+                painter = painterResource(id = popularPlace.placeImage),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize(),
                 alignment = Alignment.Center,
@@ -74,7 +75,7 @@ fun PopularPlaceItem() {
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "Alley Place",
+                            text = popularPlace.placeName,
                             color = LightOnPrimary,
                             fontSize = 12.sp
                         )
@@ -90,12 +91,12 @@ fun PopularPlaceItem() {
                             onClick = { },
                             label = {
                                 Text(
-                                    "4.1", color = Color.White,
+                                    popularPlace.placeRating, color = Color.White,
                                     fontSize = 9.sp
                                 )
                             },
                             leadingIcon = {
-                                androidx.compose.material3.Icon(
+                                Icon(
                                     imageVector = Icons.Default.Star,
                                     tint = Color.Yellow,
                                     contentDescription = null,
@@ -119,9 +120,9 @@ fun PopularPlaceItem() {
                                 .background(Color.White),
                             contentAlignment = Alignment.Center
                         ) {
-                            androidx.compose.material3.Icon(
+                            Icon(
                                 imageVector = Icons.Default.Favorite,
-                                tint = Color.Red,
+                                tint = if (popularPlace.isFav) Color.Red else Color.Black,
                                 contentDescription = null,
                                 modifier = Modifier.size(16.dp)
                             )
@@ -140,8 +141,12 @@ fun PopularPlaceItem() {
 fun PopularPlaceItemPreview() {
     MaterialTheme {
        Column {
-           PopularPlaceItem()
-           PopularPlaceItem()
+           PopularPlaceItem(
+               popularPlace = TODO()
+           )
+           PopularPlaceItem(
+               popularPlace = TODO()
+           )
        }
 
     }

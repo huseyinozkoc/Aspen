@@ -23,6 +23,7 @@ import com.example.aspen.ui.theme.LightPrimary
 fun HomeCategoriesChip(
     itemText: String = "Location",
     isSelected: Boolean = false,
+    modifier: Modifier = Modifier
 ) {
     val backgroundColor =
         if (isSelected) LightPrimary.copy(alpha = 0.10f) else LightPrimary.copy(alpha = 0f)
@@ -32,7 +33,7 @@ fun HomeCategoriesChip(
 
     MaterialTheme {
         Box(
-            modifier = Modifier
+            modifier = modifier
                 .padding(16.dp)
                 .background(
                     color = backgroundColor,
