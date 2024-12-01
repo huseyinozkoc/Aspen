@@ -34,17 +34,17 @@ fun HomeScreenTopComponent() {
 
                 Column(modifier = Modifier.fillMaxWidth(0.3f)) {
                     Text(
-                        modifier = Modifier.padding(start = 8.dp),
+                        modifier = Modifier.padding(start = 8.dp, top = 8.dp),
                         text = "Explore",
-                        fontSize = 8.sp,
+                        fontSize = 24.sp,
                         fontWeight = androidx.compose.ui.text.font.FontWeight.Normal,
                         color = Color.Black,
                     )
                     Text(
                         modifier = Modifier.padding(start = 8.dp),
                         text = "Aspen",
-                        fontSize = 16.sp,
-                        fontWeight = androidx.compose.ui.text.font.FontWeight.Normal,
+                        fontSize = 36.sp,
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
                         color = Color.Black,
                     )
                 }
@@ -65,13 +65,13 @@ fun HomeScreenTopComponent() {
                             imageVector = Icons.Default.LocationOn,
                             tint = LightPrimary,
                             contentDescription = null,
-                            modifier = Modifier.size(8.dp)
+                            modifier = Modifier.size(16.dp)
                         )
 
                         Text(
                             text = "Aspen,USA",
                             color = Color.Black,
-                            fontSize = 6.sp,
+                            fontSize = 16.sp,
                             fontWeight = androidx.compose.ui.text.font.FontWeight.Thin
                         )
 
@@ -79,7 +79,7 @@ fun HomeScreenTopComponent() {
                             imageVector = Icons.Default.KeyboardArrowDown,
                             tint = LightPrimary,
                             contentDescription = null,
-                            modifier = Modifier.size(8.dp)
+                            modifier = Modifier.size(16.dp)
                         )
                     }
                 }
