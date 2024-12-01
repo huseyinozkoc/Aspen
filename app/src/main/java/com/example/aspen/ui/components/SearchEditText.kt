@@ -1,5 +1,6 @@
 package com.example.aspen.ui.components
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -53,6 +54,7 @@ fun SearchEditText() {
 
             ),
             modifier = Modifier.padding(20.dp)
+                .fillMaxWidth()
         )
     }
 }
