@@ -52,7 +52,8 @@ fun SplashContent() {
                 Image(
                     painter = painterResource(id = com.example.aspen.R.drawable.aspen_splash_background),
                     contentDescription = "Logo",
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = androidx.compose.ui.layout.ContentScale.FillBounds
                 )
 
                 Image(
