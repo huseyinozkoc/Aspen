@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.CheckCircle
@@ -53,13 +54,15 @@ fun DetailContent() {
         Facility("Pool", Icons.Default.Build)
     )
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        DetailScreenImageComponent()
-        DetailScreenShowMapComponent()
-        FacilitiesComponent(sampleFacilities)
-        Spacer(modifier = Modifier.height(16.dp))
-        PriceComponent()
-
+    LazyColumn(modifier = Modifier.fillMaxSize()) {
+        item() {
+            DetailScreenImageComponent()
+            DetailScreenShowMapComponent()
+            FacilitiesComponent(sampleFacilities)
+            Spacer(modifier = Modifier.height(16.dp))
+            PriceComponent()
+            Spacer(modifier = Modifier.height(16.dp))
+        }
 
     }
 

@@ -38,7 +38,7 @@ fun DetailScreenImageComponent() {
             modifier = Modifier
                 .padding(horizontal = 16.dp, vertical = 16.dp)
                 .fillMaxWidth()
-                .fillMaxHeight(0.63f)
+                .height(400.dp)
                 .clip(RoundedCornerShape(16.dp)),
             contentAlignment = Alignment.Center
         ) {
