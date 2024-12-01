@@ -27,8 +27,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.aspen.ui.theme.LightPrimary
 import com.example.aspen.ui.theme.LightOnPrimary
 import com.example.aspen.R
@@ -144,9 +146,21 @@ fun HomeScreenPager() {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
 
-                    Text("Popular")
+                    Text(
+                        text = "Popular",
+                        fontSize = 24.sp,
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        color = Color.Black,
+                        modifier = Modifier.padding(start = 16.dp)
+                    )
 
-                    Text("See All")
+                    Text(
+                        text = "See All",
+                        fontSize = 16.sp,
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        color = LightPrimary,
+                        modifier = Modifier.padding(end = 16.dp)
+                    )
 
                 }
 
@@ -166,7 +180,13 @@ fun HomeScreenPager() {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
 
-                    Text("Recommended")
+                    Text(
+                        text = "Recommended",
+                        fontSize = 24.sp,
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        color = Color.Black,
+                        modifier = Modifier.padding(start = 16.dp)
+                    )
 
 
                 }
